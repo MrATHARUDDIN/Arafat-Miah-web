@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+/* Header & Navbar */
+header {
+  background: #004080;
+}
+
+.navbar .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: #e6f0ff;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Bio Section */
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bio-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bio-text h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.bio-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0066cc;
+}
+
+.contact-info {
+  text-align: right;
+  font-weight: bold;
+}
+
+
+.recent-publications {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+}
+
+.recent-publications h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #004080;
+  text-align: center;
+}
+
+.recent-publications ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recent-publications li {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.recent-publications a {
+  color: #0066cc;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+.recent-publications a:hover {
+  text-decoration: underline;
+}
+
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .footer-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+}
+
+@media (max-width: 768px) {
+  .bio {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bio-image img {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .bio-text h2 {
+    font-size: 1.5em;
+  }
+
+  .bio-text p {
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 30px;
+  }
+
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+}
