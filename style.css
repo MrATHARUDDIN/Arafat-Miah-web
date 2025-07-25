@@ -91,7 +91,6 @@ header {
   line-height: 1.6;
 }
 
-
 /* Footer */
 footer {
   background: #f0f0f0;
@@ -129,7 +128,6 @@ footer {
   font-weight: bold;
 }
 
-
 .recent-publications {
   padding: 40px 20px;
   max-width: 1000px;
@@ -164,74 +162,4 @@ footer {
 
 .recent-publications a:hover {
   text-decoration: underline;
-}
-
-
-/* 🌐 Responsive Design */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .footer-grid {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
-
-.contact-info {
-  text-align: center;
-  margin-top: 10px;
-}
-
-}
-
-@media (max-width: 768px) {
-  .bio {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .bio-image img {
-    max-width: 200px;
-    margin: auto;
-  }
-
-  .bio-text h2 {
-    font-size: 1.5em;
-  }
-
-  .bio-text p {
-    font-size: 1em;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .nav-logo {
-    height: 30px;
-  }
-
-  .hero h1 {
-    font-size: 1.6em;
-  }
-
-  .hero p {
-    font-size: 0.9em;
-  }
 }
