@@ -1,7 +1,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-600px);
+    transform: translateX(-700px);
   }
   to {
     opacity: 1;
@@ -12,7 +12,29 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(600px);
+    transform: translateX(700px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft2 {
+  from {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight2 {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
   }
   to {
     opacity: 1;
@@ -26,4 +48,12 @@
 
 .animated-slide-in-right {
   animation: slideInRight 1s ease-out;
+}
+
+.animated-left {
+  animation: slideInLeft2 1.2s ease-out;
+}
+
+.animated-right {
+  animation: slideInRight2 1.2s ease-out;
 }

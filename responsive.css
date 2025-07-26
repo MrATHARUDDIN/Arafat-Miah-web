@@ -1,4 +1,3 @@
-/* 🌐 Responsive Design */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -28,6 +27,25 @@
   .contact-info {
     text-align: center;
     margin-top: 10px;
+  }
+
+  .banner-title {
+    font-size: 2em;
+    padding: 0 10px;
+  }
+
+  .university_info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .university_pic img {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .university_text h1 {
+    font-size: 1.4em;
   }
 }
 
@@ -62,5 +80,18 @@
 
   .hero p {
     font-size: 0.9em;
+  }
+  .university_info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .university_pic img {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .university_text h1 {
+    font-size: 1.4em;
   }
 }

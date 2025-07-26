@@ -91,6 +91,35 @@ header {
   line-height: 1.6;
 }
 
+
+.banner_edu {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.banner_edu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.8em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+
+
 /* Footer */
 footer {
   background: #f0f0f0;
@@ -162,4 +191,46 @@ footer {
 
 .recent-publications a:hover {
   text-decoration: underline;
+}
+
+
+
+.education_institution {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.university_info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 5px solid #004080;
+  border-radius: 10px;
+}
+
+.university_pic img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.university_text h1 {
+  font-size: 1.6em;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.university_text p {
+  font-size: 1em;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
