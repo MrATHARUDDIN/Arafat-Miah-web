@@ -6,21 +6,29 @@
   <title>Academic Credentials - MD. Athar</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="nav-container">
-        <img src="img/logo.jpeg" alt="Logo" class="nav-logo" />
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Publications</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+     <nav class="navbar">
+  <div class="nav-container">
+    <img src="img/logo.jpeg" alt="Logo" class="nav-logo" />
+    
+    <!-- Hamburger -->
+     <div class="hamburger" id="hamburger">
+      <img src="img/hamburger.png" alt="">
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
   </header>
 
 <div class="banner_edu">
@@ -115,6 +123,9 @@
   leftElements.forEach(el => observer.observe(el));
   rightElements.forEach(el => observer.observe(el));
 </script>
+
+<script src="navbar.js"></script>
+
 
 </body>
 </html>

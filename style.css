@@ -16,6 +16,8 @@ header {
   background: #004080;
 }
 
+
+
 .navbar .nav-container {
   display: flex;
   align-items: center;
@@ -45,6 +47,14 @@ header {
 
 .nav-links li a:hover {
   text-decoration: underline;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 /* Hero Section */
