@@ -102,18 +102,20 @@ header {
 }
 
 
+/* Banner for Education and Research */
 .banner_edu {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 43vh;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .banner_edu img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .banner-title {
@@ -126,8 +128,9 @@ header {
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
+  width: 100%;
+  padding: 0 10px;
 }
-
 
 
 /* Footer */
@@ -245,6 +248,94 @@ footer {
   line-height: 1.5;
 }
 
+/* Add consistent margin and padding to all main sections */
+section, .hero, .career-objectives, .bio, .awards-section, .teaching-mentoring, .recent-publications, .education_institution {
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+/* Remove double padding for sections that already have it inline */
+.awards-section[style], .teaching-mentoring[style], .career-objectives[style], .recent-publications[style], .bio[style], .education_institution[style] {
+  padding: unset;
+}
+
+/* Awards and Mentoring Section Styles */
+.award-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.award-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0 8px 0;
+}
+.award-title {
+  flex: 1 1 70%;
+  font-size: 1.08em;
+  color: #222;
+  font-weight: 500;
+}
+.award-date {
+  flex: 0 0 150px;
+  text-align: right;
+  color: #004080;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.award-list hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 0 0.5em 0;
+}
+
+.mentor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.mentor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0 8px 0;
+}
+.mentor-title {
+  flex: 1 1 70%;
+  font-size: 1.08em;
+  color: #222;
+  font-weight: 500;
+}
+.mentor-date {
+  flex: 0 0 150px;
+  text-align: right;
+  color: #004080;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.mentor-list hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 0 0.5em 0;
+}
+
+@media screen and (max-width: 600px) {
+  .award-item, .mentor-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .award-date, .mentor-date {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .navbar .nav-container {
     flex-direction: row;
@@ -260,7 +351,7 @@ footer {
     width: 220px;
     height: 100vh;
     background-color: #004080;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem 1rem 1rem;
     box-shadow: -2px 0 10px rgba(0,0,0,0.15);
     z-index: 9999;
     gap: 20px;
@@ -271,6 +362,16 @@ footer {
   .nav-links.active {
     right: 0;
   }
+  .nav-close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10001;
+  }
   .nav__toggle {
     display: block;
   }
@@ -280,5 +381,108 @@ footer {
   }
   .nav-logo {
     z-index: 10000;
+  }
+}
+
+/* Contact Page Styles */
+.contact-section {
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+.contact-section h1 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 32px;
+}
+.contact-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.contact-form {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #f9f9f9;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.contact-form label {
+  font-weight: 600;
+  color: #004080;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  resize: vertical;
+}
+.contact-form button {
+  background: #004080;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #0066cc;
+}
+.contact-info-box {
+  flex: 1 1 260px;
+  background: #f0f6ff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-info-box h2 {
+  color: #004080;
+  margin-bottom: 12px;
+}
+.contact-info-box p {
+  margin: 0 0 6px 0;
+  font-size: 1em;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-info-box .social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+.contact-info-box .social-links a {
+  color: #004080;
+  font-size: 1.6em;
+  transition: color 0.2s;
+}
+.contact-info-box .social-links a:hover {
+  color: #0066cc;
+}
+@media screen and (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-form, .contact-info-box {
+    width: 100%;
+    min-width: 0;
   }
 }
