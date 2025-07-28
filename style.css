@@ -7,8 +7,26 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: linear-gradient(135deg, #e6f0ff 0%, #f0f6ff 100%);
+  color: #222;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero, .bio, .banner_edu, .awards-section, .teaching-mentoring, .leadership-experience, .contact-section, .recent-publications, .education_institution {
+  animation: fadeSlideUp 1.1s cubic-bezier(0.23, 1, 0.32, 1);
   background: #fff;
-  color: #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,64,128,0.07), 0 1.5px 6px rgba(0,64,128,0.04);
 }
 
 header {
@@ -384,6 +402,29 @@ section, .hero, .career-objectives, .bio, .awards-section, .teaching-mentoring, 
   }
 }
 
+/* Responsive nav-header for mobile */
+@media screen and (max-width: 720px) {
+  .nav-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav__toggle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 721px) {
+  .nav-header {
+    display: block !important;
+    width: auto;
+  }
+  .nav__toggle {
+    display: none;
+  }
+}
+
 /* Contact Page Styles */
 .contact-section {
   margin: 40px auto;
@@ -485,4 +526,50 @@ section, .hero, .career-objectives, .bio, .awards-section, .teaching-mentoring, 
     width: 100%;
     min-width: 0;
   }
+}
+
+/* Responsive image scaling for main sections */
+@media screen and (max-width: 720px) {
+  .bio-image img,
+  .banner_edu img {
+    width: 100vw;
+    height: 90%;
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 540px) {
+  .bio-image img,
+  .banner_edu img {
+    width: 100vw;
+    height: 85%;
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 420px) {
+  .bio-image img,
+  .banner_edu img {
+    width: 100vw;
+    height: 80%;
+    max-width: unset;
+  }
+}
+
+/* Navbar link hover effect */
+.nav__link {
+  transition: color 0.2s, background 0.2s;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+.nav__link:hover, .nav__link:focus {
+  color: #fff;
+  background: linear-gradient(90deg, #004080 60%, #0066cc 100%);
+}
+
+/* Button hover effect */
+button, .contact-form button {
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover, .contact-form button:hover {
+  background: linear-gradient(90deg, #004080 60%, #0066cc 100%);
+  box-shadow: 0 2px 12px rgba(0,64,128,0.12);
 }
