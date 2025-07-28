@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Athar Site</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-CNLAr+qjGmA0IwJjZt8MI3V4RbbSn/FGrc+jUOySFOm4+R+UC1cQb3B2Es35B9iFz8gZPwPbXYl1Ft1zE/x2nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css" />
   <link rel="stylesheet" href="animation.css" />
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
@@ -15,12 +15,8 @@
   <div class="nav-container">
     <img src="img/logo.jpeg" alt="Logo" class="nav-logo" />
     
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <img src="img/hamburger.png" alt="">
-    </div>
 
-    <ul class="nav-links" id="navLinks">
+    <ul class="nav-links" id="nav-menu">
       <li><a href="#">Home</a></li>
       <li><a href="education.html">Education</a></li>
       <li><a href="#">Research</a></li>
@@ -28,13 +24,22 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </div>
+  <div class="nav__toggle" id="nav-toggle">
+    <i class='bx bx-menu'></i>
+  </div>
 </nav>
 
   </header>
 
   <section class="hero">
-    <h1>Welcome to Athar Site</h1>
-    <p>Personal Academic Website</p>
+    <h1>Arafat Miah</h1>
+    <p>Pharmacogenetics | Bioinformatics | Computational Drug Discovery</p>
+    <blockquote style="font-style:italic;margin:1em 0;">“Every patient is unique genetic mapping; Pharmacogenetics helps us treat them that way”</blockquote>
+  </section>
+
+  <section class="career-objectives" style="max-width:1000px;margin:auto;padding:30px 20px;">
+    <h2>Career Objectives</h2>
+    <p>To obtain a responsible position in a reputed pharmaceutical company where I can utilize my academic and research background with practical skills in quality control, manufacturing, research, or compliance, while continuing to grow both professionally and personally in a structured and team-driven environment.</p>
   </section>
 
   <section class="bio">
@@ -66,12 +71,14 @@
   <footer>
     <div class="footer-grid">
       <div class="social-links">
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+        <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i> Instagram</a>
       </div>
       <div class="contact-info">
-        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+        <p><i class='bx bx-envelope'></i> arafat0313@student.nstu.edu.bd</p>
+        <p><i class='bx bx-phone'></i> +8801957501805</p>
+        <p><i class='bx bx-map'></i> Kasba, Brahmanbaria, Bangladesh</p>
       </div>
     </div>
   </footer>
