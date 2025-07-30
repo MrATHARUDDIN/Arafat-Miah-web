@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -22,11 +26,19 @@ body {
   }
 }
 
-.hero, .bio, .banner_edu, .awards-section, .teaching-mentoring, .leadership-experience, .contact-section, .recent-publications, .education_institution {
+
+/* This is the bg style seaction where we add good looking bg-style with box-shadow */
+.hero, .bio, .banner_edu, .awards-section, .leadership-experience, .contact-section, .recent-publications, .education_institution {
   animation: fadeSlideUp 1.1s cubic-bezier(0.23, 1, 0.32, 1);
   background: #fff;
   border-radius: 16px;
+  margin-top: 10px;
   box-shadow: 0 4px 24px rgba(0,64,128,0.07), 0 1.5px 6px rgba(0,64,128,0.04);
+}
+.teaching-mentoring > h1{
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 header {
@@ -45,7 +57,8 @@ header {
 }
 
 .nav-logo {
-  height: 40px;
+  height: 50px;
+  border-radius: 60%;
   width: auto;
 }
 
@@ -572,4 +585,165 @@ button, .contact-form button {
 button:hover, .contact-form button:hover {
   background: linear-gradient(90deg, #004080 60%, #0066cc 100%);
   box-shadow: 0 2px 12px rgba(0,64,128,0.12);
+}
+
+
+/* Featured Sections */
+.featured-sections {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,64,128,0.07), 0 1.5px 6px rgba(0,64,128,0.04);
+}
+
+.featured-sections h2 {
+  text-align: center;
+  color: #004080;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.featured-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.feature-card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,64,128,0.12);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0);
+}
+
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(0,64,128,0.18), 0 8px 24px rgba(0,64,128,0.08);
+}
+
+.feature-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feature-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,64,128,0.85) 50%, rgba(0,64,128,0.95));
+  color: white;
+  padding: 60px 20px 24px;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.9;
+}
+
+.feature-card:hover .card-overlay {
+  transform: translateY(0);
+  opacity: 1;
+  background: linear-gradient(transparent, rgba(0,64,128,0.9) 40%, rgba(0,64,128,1));
+}
+
+.card-overlay h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.card-overlay p {
+  font-size: 1em;
+  opacity: 0.95;
+  line-height: 1.4;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Responsive design for featured cards */
+@media screen and (max-width: 900px) {
+  .featured-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .feature-card {
+    max-width: 100%;
+    height: 250px;
+  }
+  
+  .featured-sections h2 {
+    font-size: 1.9em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featured-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    height: 220px;
+  }
+  
+  .featured-sections h2 {
+    font-size: 1.7em;
+    margin-bottom: 30px;
+  }
+  
+  .card-overlay {
+    padding: 40px 16px 20px;
+  }
+  
+  .card-overlay h3 {
+    font-size: 1.2em;
+  }
+  
+  .card-overlay p {
+    font-size: 0.9em;
+  }
+}
+
+/* Custom class for styling */
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20{
+  margin-bottom: 20px;
 }
